@@ -30,7 +30,8 @@ File | Description
 |data/wine.csv|CSV file with wine data|
 
 # Details of the project
-* To make category of the target values into two category (0 and 1)
+* To make category of the target values into two category (0 and 1)  
+
 | quality value|class of the quality|
 |------|:-------------:|
 |below 6|0|
