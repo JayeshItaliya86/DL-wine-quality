@@ -32,7 +32,7 @@ File | Description
 # Details of the project
 * To make category of the target values into two category (0 and 1)
 | quality value|class of the quality|
-|---|:---:|
+|------|:-------------:|
 |below 6|0|
 |above or equal to 6|1|
 
