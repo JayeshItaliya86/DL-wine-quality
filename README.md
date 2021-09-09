@@ -32,7 +32,8 @@ File | Description
 
 # Details of the project
 
-* Distribution of wine quality
+* Distribution of wine quality  
+
 ![](./visuals/distribution_quality.png)  
 
 * To make category of the target values into two categories (0 and 1)  
@@ -42,7 +43,8 @@ File | Description
 |below 6|0|
 |above or equal to 6|1|  
 
-* Baseline model: 
+* Baseline model:  
+
 |hyperparameter|value|
 |---:|:---:|
 |batch_size|1|
@@ -52,31 +54,50 @@ File | Description
 |neuron activation|relu|
 |number of neurons|9|  
 
-* Model evaluation:
+* Model evaluation:  
+
 |set|accuracy|
 |---:|:---:|
 |train|0.790|
 |test|.769|  
 
 
-* Using GridSearchCV: 
+* Using GridSearchCV:  
+
 |hyperparameter|value given|best value|
 |---:|:---:|:---:|
-|batch_size|[10, 20, 40, 60, 80, 100]|60|
-|epochs|[10, 50, 100]|100|
+|batch_size|[10, 20, 40, 60, 80, 100]|40|
+|epochs|[10, 50, 100,150, 200]|150|
 |optimizier|['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']|Adam|
 |network weight(init_mode)|['uniform', 'lecun_uniform', 'normal', 'zero', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']|glorot_normal|
 |neuron activation|['softmax', 'softplus', 'softsign', 'relu', 'tanh', 'sigmoid', 'hard_sigmoid', 'linear']|relu|
 |dropout_rate|[0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]|0.0|
 |number of neurons|[1, 5, 10, 15, 20, 25, 30]|30|  
 
-* Model evaluation:
+* Model evaluation:  
+
 |set|accuracy|
 |---:|:---:|
-|train|0.790|
-|test|.769|  
+|train|0.741|
+|test|.737|  
+
+* Confusion matrix:  
+
+![](./visuals/confusion_matrix_base_model.png) | ![](./visuals/confusion_matrix_gridsearchcv_model.png)  
+
+* Validation of Accuracy and loss on training:  
+- baseline model:    
+
+![](./visuals/accuracy_loss_base_model.png)
+
+- after GridSearchCV:  
+
+1[](./visuals/accuracy_loss_gridsearchcv_model.png)
 
 
+
+# Conclusion
+I found the lower accuracy after applying GreadSerachCV on the nearal network model becuase I think there was a possibility that i used **loss='binary_crossentropy'**. If I used some other loss then maybe I will got higher accuracy then my **Baseline model.** 
 
 
 # Contributors
