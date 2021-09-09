@@ -79,8 +79,8 @@ File | Description
 
 |Set|Baseline accuracy|GridSearchCV accuracy|
 |:---|:---:|:---:|
-|train|0.790|0.741|
-|test|0.769|0.737|  
+|train|0.787|0.751|
+|test|0.755|0.747|  
 
 When I used gridsearch on 
 
