@@ -26,7 +26,7 @@ We were provided with a wine dataset with contained data on red and white wines.
 # Usage
 
 File | Description
-|:---|:---:|
+|:---|:---|
 |data/wine.csv|CSV file with wine data|
 |base_model.ipynb|Baseline model of neural network using keras|  
 |tune_hyperparameter.ipynb|Check the best hyperparameters using GridSearchCV of nearal network model|
@@ -44,7 +44,7 @@ File | Description
 * To make category of the target values into two categories (0 and 1)  
 
 | quality value|class of the quality|
-|------|:-------------:|
+|:------|:-------------:|
 |below 6|0|
 |above or equal to 6|1|  
 
@@ -53,7 +53,7 @@ File | Description
 * Baseline model:  
 
 |hyperparameter|value|
-|---:|:---:|
+|:---|:---:|
 |batch_size|1|
 |epochs|30|
 |optimizier|Adam|
@@ -65,7 +65,7 @@ File | Description
 * Using GridSearchCV:  
 
 |hyperparameter|value given|best value|
-|---:|:---:|:---:|
+|:---|:---|:---:|
 |batch_size|[10, 20, 40, 60, 80, 100]|40|
 |epochs|[10, 50, 100,150, 200]|150|
 |optimizier|['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']|Adam|
@@ -78,7 +78,7 @@ File | Description
 * Model evaluation:  
 
 |Set|Baseline accuracy|GridSearchCV accuracy|
-|---:|:---:|:---:|
+|:---|:---:|:---:|
 |train|0.790|0.741|
 |test|0.769|0.737|  
 
@@ -101,7 +101,7 @@ When I used gridsearch on
 ### Different classification model using kerasclassifier  
 
 |Model name|Accuracy|
-|---:|:---:|
+|:---|:---:|
 |NeuralNet| 0.684|
 |KNN|0.760|
 |SVC|0.767|
