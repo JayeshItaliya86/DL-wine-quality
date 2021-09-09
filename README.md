@@ -28,7 +28,12 @@ We were provided with a wine dataset with contained data on red and white wines.
 File | Description
 |:---|:---:|
 |data/wine.csv|CSV file with wine data|
-|base_model.ipynb|Baseline model of neural network using keras|
+|base_model.ipynb|Baseline model of neural network using keras|  
+|tune_hyperparameter.ipynb|Check the best hyperparameters using GridSearchCV of nearal network model|
+|gridsearchcv_model.ipynb|Build the model after tunning the hyperparametes using GridSearchCV|
+|different_models_using_base_params.ipynb|use different classification model with baseline model params to check accuracy|
+|/Visuals|All visuals|  
+
 
 # Details of the project
 
@@ -43,6 +48,8 @@ File | Description
 |below 6|0|
 |above or equal to 6|1|  
 
+### Tune the hyperparameters
+
 * Baseline model:  
 
 |hyperparameter|value|
@@ -53,13 +60,6 @@ File | Description
 |network weight(init_mode)|normal|
 |neuron activation|relu|
 |number of neurons|9|  
-
-* Model evaluation:  
-
-|set|accuracy|
-|---:|:---:|
-|train|0.790|
-|test|.769|  
 
 
 * Using GridSearchCV:  
@@ -74,25 +74,39 @@ File | Description
 |dropout_rate|[0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]|0.0|
 |number of neurons|[1, 5, 10, 15, 20, 25, 30]|30|  
 
+
 * Model evaluation:  
 
-|set|accuracy|
-|---:|:---:|
-|train|0.741|
-|test|.737|  
+|Set|Baseline accuracy|GridSearchCV accuracy|
+|---:|:---:|:---:|
+|train|0.790|0.741|
+|test|0.769|0.737|  
+
+When I used gridsearch on 
 
 * Confusion matrix:  
 
-![](./visuals/confusion_matrix_base_model.png) | ![](./visuals/confusion_matrix_gridsearchcv_model.png)  
+![](./visuals/confusion_matrix_base_model.png)  ![](./visuals/confusion_matrix_gridsearchcv_model.png)  
 
-* Validation of Accuracy and loss on training:  
+* Validation Accuracy and loss on training:  
 - baseline model:    
 
 ![](./visuals/accuracy_loss_base_model.png)
 
 - after GridSearchCV:  
 
-1[](./visuals/accuracy_loss_gridsearchcv_model.png)
+![](./visuals/accuracy_loss_gridsearchcv_model.png)
+
+
+### Different classification model using kerasclassifier  
+
+|Model name|Accuracy|
+|---:|:---:|
+|NeuralNet| 0.684|
+|KNN|0.760|
+|SVC|0.767|
+|DecisionTree|0.741|
+|RandomForest|0.756|
 
 
 
